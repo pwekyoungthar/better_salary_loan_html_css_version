@@ -1,0 +1,124 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: linear-gradient(#f5a41c, #ffd600);
+  padding: 1.6rem 3.2rem;
+}
+.main_title {
+  font-size: 3rem;
+  font-weight: var(--bold);
+  line-height: 4rem;
+  color: var(--primary-brown-dark);
+  text-align: right;
+}
+.main_title span {
+  color: var(--black);
+}
+.logo_img {
+  width: 16.4rem;
+}
+.main_logo {
+  width: 16.4rem;
+}
+
+/* Personal_information */
+.gender {
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+.gender .radios {
+  gap: 0.8rem;
+  padding: 0.8rem 1.6rem;
+}
+
+.home-address {
+  min-height: auto;
+}
+.home-address-gp {
+  gap: 1.2rem;
+}
+.region-gp,
+.township-gp,
+.detail-address-gp {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 32%;
+}
+.marital-status,
+.dependent-person,
+.family-member,
+.home-ownership {
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+.marital-status .radios,
+.dependent-person .radios,
+.family-member .radios {
+  gap: 0.8rem;
+  padding: 0.8rem 1.6rem;
+}
+
+/* Terms and Conditions */
+.para_gp {
+  display: flex;
+  gap: 1.6rem;
+  font-weight: 600;
+  background-color: var(--foreground-color);
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  padding: 1.6rem 3.2rem;
+}
+
+.terms_container {
+  flex-direction: row;
+}
+.input-checkBox {
+  width: 4rem;
+}
+
+/* E Signature */
+.signature-container {
+  border: 1px solid green;
+  padding: 10px;
+  margin: 20px;
+  max-width: 400px;
+}
+
+canvas {
+  border: 1px solid #000;
+  width: 100%;
+}
+
+button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: var(--primary-brown-dark);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.btn-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--foreground-color);
+}
+.btn {
+  margin: 1.6rem 0;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  background-color: var(--primary-brown-light);
+  width: 25rem;
+  height: 5rem;
+  border-radius: 0.9rem;
+  cursor: pointer;
+  color: var(--white);
+  transition: 0.3s;
+}
+.input_submit:hover,
+.input_submit:active {
+  background-color: var(--primary-brown-dark);
+}

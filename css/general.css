@@ -1,0 +1,257 @@
+/*
+  --- 01 Typography System
+  -Font Size(px)
+  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+  
+  
+  -Font Family
+  Google Font :
+  default : sans-serif
+  
+  -Font Weight
+  default : 400
+  heading-primary : 700
+  
+  -Line Height
+  default : 1
+  heading-primary : 1.1
+  
+  --- 02 Color
+  -Primary : ;
+  -Tints : ,
+  -Shades : ,
+  -Accents
+  -Grays : ;
+  
+  --- 03 Shadow
+  
+  --- 04 Border Radius
+  default : 9px;
+  
+  -Spacing System(px)
+  2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+  */
+:root {
+  --black: #111827;
+  --white: #e5e7eb;
+  --primary-yellow-dark: #f5a41c;
+  --primary-yellow-light: #ffd600;
+  --primary-brown-dark: #691d33;
+  --primary-brown-light: #a7284d;
+  --background-color: #f1f1f2;
+  --foreground-color: #ffffff;
+
+  --title-font: 1.6rem;
+  --para-font: 1.8rem;
+
+  --bold: 700;
+  --semi-bod: 600;
+  --normal: 400;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  /*Font-size => 10 */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: var(--normal);
+  color: var(--black);
+  line-height: 1;
+  background-color: var(--background-color);
+}
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  position: relative;
+}
+/* Section Container */
+section {
+  background-color: var(--foreground-color);
+  margin-top: 1.6rem;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  overflow: hidden;
+  padding-bottom: 1.6rem;
+}
+
+/* Title Container */
+.title-container {
+  background-image: linear-gradient(
+    var(--primary-brown-light),
+    var(--primary-brown-dark)
+  );
+  padding: 1.6rem 3.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section-title {
+  font-size: var(--title-font);
+  color: var(--white);
+  font-weight: var(--bold);
+}
+
+/* Accordium CSS */
+.accordium {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 3px solid var(--white);
+  cursor: pointer;
+}
+.accordium i {
+  font-size: 1.6rem;
+  padding: 0.8rem;
+  color: var(--white);
+}
+
+.hidden-box {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease;
+}
+.open-box {
+  height: auto;
+  transition: height 0.5s ease;
+}
+.hidden-icon {
+  display: none;
+}
+
+/* Input Container */
+.input-container {
+  width: 100%;
+  padding: 0 3.2rem;
+}
+.row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  padding: 1.6rem 0 3.2rem 0;
+  border-bottom: 2px solid #9ca3af;
+  overflow: hidden;
+}
+.row:last-child {
+  border-bottom: none;
+}
+.container-helf {
+  overflow: hidden;
+  padding-top: 1.6rem;
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  font-size: var(--para-font);
+}
+.container-full {
+  width: 99.5%;
+  padding: 1.6rem 0;
+  display: flex;
+  flex-direction: column;
+  font-size: var(--para-font);
+  gap: 1.6rem;
+  overflow: hidden;
+}
+
+/* Input Class */
+.input-title {
+  color: var(--black);
+  font-size: var(--para-font);
+  line-height: 3.2rem;
+  min-height: 6.5rem;
+}
+.input-mm-title {
+}
+.input-eng-title {
+  color: var(--primary-brown-dark);
+}
+.input-text,
+.input-date,
+.input-select,
+.input-number,
+.input-email,
+.input-file {
+  width: 100%;
+  height: 3.5rem;
+  background-color: var(--background-color);
+  border: none;
+  outline: none;
+  border-radius: 0.7rem;
+  font-size: 1.8rem;
+  padding: 1.6rem 0 1.6rem 1.2rem;
+}
+.input-date,
+.input-select {
+  cursor: pointer;
+}
+
+/* Input Group */
+.input-gp {
+  display: flex;
+  gap: 1.6rem;
+}
+.radios {
+  display: flex;
+  gap: 1.2rem;
+  border: 1px solid var(--black);
+  padding: 1.2rem 2.4rem;
+  border-radius: 0.9rem;
+  cursor: pointer;
+  align-items: center;
+}
+input[type="radio"] {
+  border: 0px;
+  width: 1.6rem;
+  height: 1.6em;
+  cursor: pointer;
+}
+.radio-label {
+  font-size: var(--para-font);
+  cursor: pointer;
+  line-height: 3.2rem;
+  white-space: nowrap;
+}
+
+/* NRC Input GP */
+.nrc-gp {
+  width: 95%;
+}
+.reg-num,
+.national-type {
+  width: 20%;
+}
+
+/* Ohter Input */
+.other-input {
+  border: none;
+}
+.other-input input {
+  width: auto;
+  height: 3.5rem;
+  background-color: var(--background-color);
+  border: none;
+  outline: none;
+  border-radius: 0.7rem;
+  font-size: 1.8rem;
+  padding: 1.6rem 0 1.6rem 1.2rem;
+}
+
+/* inputs */
+.inputs {
+  display: flex;
+  gap: 1.2rem;
+}
+
+/* Input File */
+.input-file {
+  height: auto;
+  width: 90%;
+}
